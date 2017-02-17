@@ -1,0 +1,20 @@
+{
+  "name": "wonder-tool-convert_namespace_to_es2015",
+  "version": "0.0.6",
+  "main": "../convert.js",
+  "keywords": [
+    "wonderjs",
+    "convert_namespace_to_es2015"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "@types/fs-extra": "0.0.37",
+    "@types/node": "^7.0.5",
+    "fs-extra": "^2.0.0",
+    "glob": "^7.1.1",
+    "typescript": "2.0.3"
+  },
+  "bin": {
+    "convertNamespaceToES2015": "./bin/convertNamespaceToES2015"
+  }
+}

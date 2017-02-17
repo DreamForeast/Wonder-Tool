@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+
+// var gulp = require("gulp");
+var fs = require("fs-extra");
+// var gulpSync = require("gulp-sync")(gulp);
+var path = require("path");
+
+var convert = require("../convert.js").generateDocumentation;
+var ts = require("typescript");
+
+
+//todo move to wonder-package
+function parseOption(name) {
+    var value = null,
+        i = process.argv.indexOf(name);
+
+    if (i > -1) {
+        value = process.argv[i + 1];
+    }
+
+    return value;
+}
+
+// function isDefinOption(name) {
+//     return process.argv.indexOf(name) > -1;
+// }
+//
+// module.exports = {
+//     parseOption: parseOption,
+//     isDefinOption: isDefinOption
+// }
+
+
+
+var rootDir = parseOption("--rootDir"),
+    sourceFileGlobArr = parseOption("--sourceFileGlob").split(','),
+    destDir = parseOption("--destDir") || "./dest/";
+
+
+fs.removeSync(destDir);
+
+convert(rootDir, sourceFileGlobArr, destDir, {
+    target: ts.ScriptTarget.ES5,
+    module: ts.ModuleKind.System
+});
+
