@@ -6,16 +6,17 @@
     "wonderjs",
     "convert_namespace_to_es2015"
   ],
-    "scripts": {
-      "postinstall": "npm install -g typescript-formatter"
-    },
+  "scripts": {
+    "postinstall": "npm install -g typescript-formatter"
+  },
   "devDependencies": {},
   "dependencies": {
     "@types/fs-extra": "0.0.37",
     "@types/node": "^7.0.5",
     "fs-extra": "^2.0.0",
     "glob": "^7.1.1",
-    "typescript": "2.0.3"
+    "typescript": "2.0.3",
+    "wonder-package": "^0.1.9"
   },
   "bin": {
     "convertNamespaceToES2015": "./bin/convertNamespaceToES2015"
