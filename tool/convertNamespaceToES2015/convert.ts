@@ -383,7 +383,7 @@ export function generateDocumentation(rootDir, sourceFileGlobArr, destDir, optio
     // console.log(JSON.stringify(fileDataMap));
 
 
-    console.log("finish");
+    console.log("convert success");
 
     return;
 

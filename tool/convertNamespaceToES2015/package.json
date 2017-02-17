@@ -1,11 +1,14 @@
 {
   "name": "wonder-tool-convert_namespace_to_es2015",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "../convert.js",
   "keywords": [
     "wonderjs",
     "convert_namespace_to_es2015"
   ],
+    "scripts": {
+      "postinstall": "npm install -g typescript-formatter"
+    },
   "devDependencies": {},
   "dependencies": {
     "@types/fs-extra": "0.0.37",

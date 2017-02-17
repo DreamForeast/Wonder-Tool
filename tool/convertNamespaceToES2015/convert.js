@@ -263,7 +263,7 @@ function generateDocumentation(rootDir, sourceFileGlobArr, destDir, options) {
         }
     }
     // console.log(JSON.stringify(fileDataMap));
-    console.log("finish");
+    console.log("convert success");
     return;
 }
 exports.generateDocumentation = generateDocumentation;
